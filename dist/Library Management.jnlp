@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Library Management.jnlp">
+  <information>
+    <title>Library Management</title>
+    <vendor>Deepak</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="lib\jfoenix.jar" size="2206526" download="eager" />
+    <jar href="lib\ojdbc14.jar" size="1536797" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Library Management" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="library.controller.Start"  name="Library Management" />
+  <update check="always"/>
+</jnlp>

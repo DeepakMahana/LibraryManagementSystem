@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane id="Pane" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.controller.AddMemberController">
+   <children>
+      <HBox alignment="TOP_CENTER" prefWidth="723.0">
+         <children>
+            <VBox alignment="TOP_CENTER" maxWidth="700.0" spacing="30.0">
+               <children>
+                  <Label prefHeight="45.0" prefWidth="680.0" text="Members Registration" textFill="#00bcd4">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <JFXTextField fx:id="id" focusColor="#b2ebf2" labelFloat="true" prefWidth="700.0" promptText="Member ID (Barcode)" style="-fx-text-fill: #00bcd4;" unFocusColor="#00bcd4">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" />
+                     </effect>
+                     <VBox.margin>
+                        <Insets top="25.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <JFXTextField fx:id="name" focusColor="#b2ebf2" labelFloat="true" layoutX="10.0" layoutY="10.0" prefWidth="700.0" promptText="Member Name" style="-fx-text-fill: #00bcd4;" unFocusColor="#00bcd4">
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" />
+                     </effect>
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextArea fx:id="address" focusColor="#b2ebf2" labelFloat="true" maxWidth="1000.0" minWidth="500.0" prefHeight="75.0" prefWidth="700.0" promptText="Address" style="-fx-text-fill: #00bcd4;" stylesheets="@textarea.css" unFocusColor="#00bcd4" wrapText="true">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" />
+                     </effect>
+                     <padding>
+                        <Insets bottom="5.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets left="15.0" right="15.0" />
+                     </VBox.margin>
+                  </JFXTextArea>
+                  <HBox prefHeight="50.0" prefWidth="650.0">
+                     <children>
+                        <JFXTextField fx:id="contactNumber" focusColor="#b2ebf2" labelFloat="true" prefWidth="350.0" promptText="Contact Number 1" style="-fx-text-fill: #00bcd4;" unFocusColor="#00bcd4">
+                           <effect>
+                              <DropShadow blurType="GAUSSIAN" />
+                           </effect>
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                        </JFXTextField>
+                        <JFXTextField fx:id="contactNumber2" focusColor="#b2ebf2" labelFloat="true" layoutX="10.0" layoutY="10.0" prefWidth="350.0" promptText="Contact Number 2" style="-fx-text-fill: #00bcd4;" unFocusColor="#00bcd4">
+                           <effect>
+                              <DropShadow blurType="GAUSSIAN" />
+                           </effect>
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </JFXTextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <ChoiceBox fx:id="mem_stream" prefHeight="50.0" prefWidth="350.0" style="-fx-font-size: 20;">
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin></ChoiceBox>
+                        <ChoiceBox fx:id="mem_gender" layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="350.0" style="-fx-font-size: 20;">
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </ChoiceBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="650.0">
+                     <children>
+                        <JFXDatePicker fx:id="dob" defaultColor="#00bcd4" prefHeight="55.0" prefWidth="350.0" promptText="Date of Birth" style="-fx-background-color: #ffffff; -fx-font-size: 20; -fx-fill: #00bcd4;">
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                        </JFXDatePicker>
+                        <ChoiceBox fx:id="mem_status" prefHeight="50.0" prefWidth="350.0" style="-fx-font-size: 20;" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="51.0" prefWidth="650.0">
+                     <children>
+                        <JFXButton buttonType="RAISED" onAction="#addMember" prefHeight="65.0" prefWidth="350.0" ripplerFill="WHITE" stylesheets="@btn.css" text="Add Member" textAlignment="CENTER">
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="registCancel" buttonType="RAISED" layoutX="10.0" layoutY="10.0" onAction="#cancelRegist" prefHeight="65.0" prefWidth="350.0" ripplerFill="WHITE" stylesheets="@btn.css" text="Cancel">
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="290.0" prefWidth="195.0">
+               <children>
+                  <ImageView fx:id="MemberImage" fitHeight="237.0" fitWidth="209.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../icons/IIH.png" />
+                     </image>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </ImageView>
+                  <JFXButton fx:id="browseImage" buttonType="RAISED" onAction="#openFileChooser" prefHeight="50.0" prefWidth="208.0" ripplerFill="WHITE" stylesheets="@btn.css" text="Browse Image" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/browse.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+               <HBox.margin>
+                  <Insets left="80.0" top="170.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+   <effect>
+      <DropShadow blurType="GAUSSIAN">
+         <input>
+            <Glow />
+         </input>
+      </DropShadow>
+   </effect>
+   <stylesheets>
+      <URL value="@main.css" />
+      <URL value="@btn.css" />
+   </stylesheets>
+</StackPane>

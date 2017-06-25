@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane id="Pane" prefHeight="800.0" prefWidth="1280.0" stylesheets="@main.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.controller.ViewMembersController">
+   <children>
+      <VBox>
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="100000.0" prefHeight="21.0" text="View Members" textAlignment="CENTER" textFill="#00bcd4">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="searchField" alignment="CENTER" focusColor="#b2ebf2" labelFloat="true" promptText="Search Member" style="-fx-text-fill: #00bcd4;" unFocusColor="#00bcd4">
+               <font>
+                  <Font size="30.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <VBox.margin>
+                  <Insets left="250.0" right="250.0" top="20.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <TableView fx:id="tableView" prefHeight="655.0" prefWidth="1240.0" stylesheets="@TV.css">
+              <columns>
+              </columns>
+               <VBox.margin>
+                  <Insets bottom="50.0" left="20.0" right="20.0" />
+               </VBox.margin>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</StackPane>

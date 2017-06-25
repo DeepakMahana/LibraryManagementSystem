@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane id="Pane" alignment="TOP_CENTER" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.controller.EditBookController">
+   <children>
+      <VBox alignment="TOP_CENTER" maxHeight="600.0" maxWidth="760.0" spacing="40.0" StackPane.alignment="TOP_CENTER">
+         <children>
+            <Label prefHeight="45.0" prefWidth="760.0" text="Edit Books Details" textAlignment="CENTER" textFill="#00bcd4">
+               <font>
+                  <Font size="40.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Label>
+            <JFXTextField fx:id="id" editable="false" focusColor="#b2ebf2" labelFloat="true" layoutX="10.0" layoutY="410.0" maxWidth="760.0" minWidth="437.0" prefHeight="70.0" prefWidth="760.0" promptText="Book ID" style="-fx-text-fill: #00bcd4;" unFocusColor="#00bcd4">
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" />
+               </effect>
+               <font>
+                  <Font size="25.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="name" focusColor="#b2ebf2" labelFloat="true" maxWidth="760.0" minWidth="437.0" prefHeight="70.0" prefWidth="760.0" promptText="Book Title" style="-fx-text-fill: #00bcd4;" unFocusColor="#00bcd4">
+               <font>
+                  <Font size="25.0" />
+               </font>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" />
+               </effect>
+            </JFXTextField>
+            <JFXTextField fx:id="author" focusColor="#b2ebf2" labelFloat="true" maxWidth="760.0" minWidth="437.0" prefHeight="70.0" prefWidth="760.0" promptText="Author Name" style="-fx-text-fill: #00bcd4;" unFocusColor="#00bcd4">
+               <font>
+                  <Font size="25.0" />
+               </font>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" />
+               </effect>
+            </JFXTextField>
+            <JFXTextField fx:id="publisher" focusColor="#b2ebf2" labelFloat="true" layoutX="10.0" layoutY="70.0" maxWidth="760.0" minWidth="437.0" prefHeight="70.0" prefWidth="760.0" promptText="Publisher" style="-fx-text-fill: #00bcd4;" unFocusColor="#00bcd4">
+               <font>
+                  <Font size="25.0" />
+               </font>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" />
+               </effect>
+            </JFXTextField>
+            <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <ChoiceBox fx:id="stream" prefHeight="50.0" prefWidth="380.0" style="-fx-font-size: 20;" />
+               </children>
+            </HBox>
+            <HBox prefHeight="50.0" prefWidth="742.0">
+               <children>
+                  <JFXButton fx:id="updateBook" buttonType="RAISED" onAction="#updateBook" prefHeight="50.0" prefWidth="371.0" ripplerFill="WHITE" stylesheets="@btn.css" text="Update" textAlignment="CENTER" textFill="#009fff">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow blurType="GAUSSIAN" />
+                     </effect>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="cancelupdatebook" buttonType="RAISED" layoutX="10.0" layoutY="10.0" onAction="#cancelUpdateBook" prefHeight="50.0" prefWidth="371.0" ripplerFill="WHITE" stylesheets="@btn.css" text="Cancel" textAlignment="CENTER" textFill="#009fff">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow blurType="GAUSSIAN" />
+                     </effect>
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+   <effect>
+      <DropShadow blurType="GAUSSIAN">
+         <input>
+            <Glow />
+         </input></DropShadow>
+   </effect>
+   <stylesheets>
+      <URL value="@main.css" />
+      <URL value="@btn.css" />
+   </stylesheets>
+</StackPane>

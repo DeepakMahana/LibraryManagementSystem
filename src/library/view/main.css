@@ -1,0 +1,14 @@
+
+#Pane {
+    -fx-background-image: url("../icons/bg22.jpg");
+    -fx-background-repeat: stretch;
+    -fx-background-position: center center;
+    -fx-background-size: stretch;
+}
+
+#TableView{
+    -fx-background-image: url("../icons/bg6.jpg");
+    -fx-background-repeat: stretch;
+    -fx-background-position: center center;
+    -fx-background-size: stretch;
+}

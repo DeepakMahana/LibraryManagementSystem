@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane id="Pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" stylesheets="@main.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.controller.EditMemberController">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+         <StackPane.margin>
+            <Insets bottom="20.0" top="30.0" />
+         </StackPane.margin>
+         <children>
+            <Label text="Edit Member Details" textFill="#00bcd4">
+               <font>
+                  <Font size="40.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="30.0" />
+               </VBox.margin>
+            </Label>
+            <HBox prefHeight="696.0" prefWidth="1154.0">
+               <children>
+                  <VBox alignment="TOP_RIGHT" prefHeight="642.0" prefWidth="366.0" spacing="20.0">
+                     <children>
+                        <Label text="Member ID" textFill="#00bcd4">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label layoutX="243.0" layoutY="10.0" text="Name" textFill="#00bcd4">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="309.0" layoutY="66.0" text="Address" textFill="#00bcd4">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="45.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label layoutX="309.0" layoutY="66.0" text="Contact Number" textFill="#00bcd4">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="270.0" layoutY="223.0" text="Alternate Contact Number" textFill="#00bcd4">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="85.0" layoutY="335.0" text="Date of Birth" textFill="#00bcd4">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label layoutX="85.0" layoutY="391.0" text="Gender" textFill="#00bcd4">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label layoutX="298.0" layoutY="447.0" text="Stream" textFill="#00bcd4">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="7.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label layoutX="298.0" layoutY="503.0" text="Status" textFill="#00bcd4">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="8.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <padding>
+                        <Insets right="15.0" />
+                     </padding>
+                  </VBox>
+                  <VBox maxWidth="500.0" prefHeight="672.0" prefWidth="400.0" spacing="20.0">
+                     <children>
+                        <TextField fx:id="mem_ID" minHeight="38.0" prefHeight="38.0" prefWidth="343.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </TextField>
+                        <TextField fx:id="mem_Name" minHeight="38.0" prefHeight="38.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </TextField>
+                        <JFXTextArea fx:id="mem_Address" focusColor="#b2ebf2" maxWidth="500.0" minHeight="75.0" prefHeight="75.0" prefWidth="590.0" style="-fx-text-fill: #00bcd4;" stylesheets="@textarea.css" unFocusColor="#00bcd4">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </JFXTextArea>
+                        <TextField fx:id="mem_Contact1" minHeight="38.0" prefHeight="38.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </TextField>
+                        <TextField fx:id="mem_Contact2" minHeight="38.0" prefHeight="38.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </TextField>
+                        <JFXDatePicker fx:id="mem_DOB" defaultColor="#00bcd4" prefHeight="37.0" prefWidth="350.0" promptText="Date of Birth" style="-fx-background-color: #ffffff; -fx-font-size: 20; -fx-fill: #00bcd4;">
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                        </JFXDatePicker>
+                        <ChoiceBox fx:id="mem_Gender" prefWidth="350.0" style="-fx-font-size: 20;" />
+                        <ChoiceBox fx:id="mem_Stream" prefWidth="350.0" style="-fx-font-size: 20;" />
+                        <ChoiceBox fx:id="mem_Status" prefWidth="350.0" style="-fx-font-size: 20;" />
+                        <HBox>
+                           <children>
+                              <JFXButton fx:id="updateMember" buttonType="RAISED" onAction="#updateMember" prefHeight="23.0" prefWidth="197.0" ripplerFill="WHITE" stylesheets="@btn.css" text="Update Details">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect>
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                             <JFXButton fx:id="updateCancel" buttonType="RAISED" onAction="#updateCancel" prefHeight="44.0" prefWidth="201.0" ripplerFill="WHITE" stylesheets="@btn.css" text="Cancel" textAlignment="CENTER" textFill="#009fff">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <effect>
+                              <InnerShadow blurType="GAUSSIAN" />
+                           </effect>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                        </JFXButton>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="290.0" prefWidth="195.0">
+                     <children>
+                        <ImageView fx:id="mem_Image" fitHeight="237.0" fitWidth="209.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../icons/IIH.png" />
+                           </image>
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                        </ImageView>
+                        <JFXButton fx:id="browseImage" buttonType="RAISED" onAction="#openFileChooser" prefHeight="50.0" prefWidth="208.0" ripplerFill="WHITE" stylesheets="@btn.css" text="Browse Image" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/browse.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="100.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</StackPane>

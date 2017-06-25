@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane id="Pane" prefHeight="800.0" prefWidth="1280.0" stylesheets="@main.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.controller.IRBookController">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="15.0">
+         <children>
+            <Label text="Issue / Return Book" textFill="#00bcd4">
+               <font>
+                  <Font size="40.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <JFXTextField fx:id="mem_id" focusColor="#b2ebf2" labelFloat="true" onAction="#showMemberDetails" prefHeight="60.0" prefWidth="400.0" promptText="Member ID" style="-fx-text-fill: #00bcd4;" unFocusColor="#00bcd4">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+                  <JFXTextField fx:id="book_id" focusColor="#b2ebf2" labelFloat="true" onAction="#showBookDetails" prefWidth="400.0" promptText="Book ID" style="-fx-text-fill: #00bcd4;" unFocusColor="#00bcd4">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="324.0" prefWidth="1280.0" spacing="100.0">
+               <children>
+                  <HBox prefHeight="250.0" prefWidth="500.0">
+                     <children>
+                        <VBox prefHeight="233.0" prefWidth="400.0">
+                           <children>
+                              <Label fx:id="mem_name" prefHeight="67.0" prefWidth="400.0" text="MEMBER NAME" textFill="#00bcd4" wrapText="true">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="no_of_books" prefHeight="71.0" prefWidth="400.0" text="MEMBER STREAM" textFill="#00bcd4" wrapText="true">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="mem_stream" prefHeight="65.0" prefWidth="400.0" text="MEMBER STATUS" textFill="#00bcd4" wrapText="true">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </VBox>
+                        <ImageView fx:id="mem_img" fitHeight="237.0" fitWidth="209.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../icons/IIH.png" />
+                           </image>
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <VBox prefHeight="214.0" prefWidth="487.0">
+                     <children>
+                        <Label fx:id="book_name" prefHeight="67.0" prefWidth="400.0" text="BOOK NAME" textFill="#00bcd4" wrapText="true">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="book_author" prefHeight="71.0" prefWidth="400.0" text="BOOK AUTHOR" textFill="#00bcd4" wrapText="true">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="book_publisher" prefHeight="65.0" prefWidth="400.0" text="BOOK PUBLISHER" textFill="#00bcd4" wrapText="true">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets left="30.0" right="30.0" />
+               </padding>
+            </HBox>
+            <VBox alignment="TOP_CENTER" prefHeight="434.0" prefWidth="1280.0">
+               <children>
+                  <TableView fx:id="tableView" prefHeight="330.0" prefWidth="1220.0" stylesheets="@TV.css">
+                     <VBox.margin>
+                        <Insets left="30.0" right="30.0" />
+                     </VBox.margin>
+                  </TableView>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <JFXButton fx:id="issuebtn" buttonType="RAISED" onAction="#issuebook" prefWidth="250.0" ripplerFill="WHITE" stylesheets="@btn.css" text="Issue">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" layoutX="525.0" layoutY="35.0" onAction="#returnbook" prefWidth="250.0" ripplerFill="WHITE" stylesheets="@btn.css" text="Return">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</StackPane>
